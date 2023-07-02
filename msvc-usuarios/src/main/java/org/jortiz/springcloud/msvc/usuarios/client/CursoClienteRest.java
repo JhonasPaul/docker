@@ -11,3 +11,4 @@ public interface CursoClienteRest {
     @DeleteMapping("/eliminar-curso-usuario/{id}")
     void eliminarUsuarioPorId(@PathVariable Long id);
 }
+//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
