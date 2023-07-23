@@ -1,6 +1,7 @@
 package org.jortiz.springcloud.msvc.cursos.models.entity;
 
 import jakarta.persistence.*;
+import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 @Table(name = "cursos_usuarios")

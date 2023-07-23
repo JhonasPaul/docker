@@ -5,8 +5,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-
-@FeignClient(name = "eliminar-usuario", url = "http://host.docker.internat:8002")
+                                            /*msvc-usuarios es el nombnre del contenedor de msvc-cursos*/
+@FeignClient(name = "msvc-cursos", url = "msvc-cursos:8002") /*es bueno que coisido con el nombre del servicio cursos*/
 public interface CursoClienteRest {
     @DeleteMapping("/eliminar-curso-usuario/{id}")
     void eliminarUsuarioPorId(@PathVariable Long id);

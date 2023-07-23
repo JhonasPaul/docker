@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@FeignClient(name = "msvc-usuarios", url = "http://localhost:8001")
+@FeignClient(name = "msvc-usuarios", url = "msvc-usuarios:8001")
 public interface UsuarioClientRest {
 
     /*metodo del controlador de microservicio usuarios*/

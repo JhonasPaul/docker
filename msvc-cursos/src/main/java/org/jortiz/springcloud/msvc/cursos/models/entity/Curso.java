@@ -2,6 +2,7 @@ package org.jortiz.springcloud.msvc.cursos.models.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
+import org.hibernate.annotations.GenericGenerator;
 import org.jortiz.springcloud.msvc.cursos.models.Usuario;
 
 import java.util.ArrayList;

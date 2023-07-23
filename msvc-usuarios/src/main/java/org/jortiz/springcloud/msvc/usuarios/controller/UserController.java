@@ -21,8 +21,8 @@ public class UserController {
     private UsuarioService service;
 
     @GetMapping
-    public List<Usuario> listar() {
-        return service.listar();
+    public Map<String,List<Usuario>> listar() {
+        return Collections.singletonMap("usuarios", service.listar());
     }
 
     @GetMapping("/buscar/{id}")/*el @PathVariable permite que valor de la ruta url se pasa por el argumento del metodo detalle*/
@@ -116,7 +116,7 @@ public class UserController {
 
     private static ResponseEntity<Map<String, String>> getMapResponseEntity(Usuario usuario) {
         Map<String, String> response = new HashMap<>();
-        response.put("mensaje ", "el usuario con el email ".concat(usuario.getEmail()).concat(" ya existe en la base de datos"));
+        response.put("mensaje ", "email electronico ".concat(usuario.getEmail()).concat(" ya existe en la base de datos"));
 //        return new ResponseEntity<>(Collections.singletonMap("mensaje ", "ya"), HttpStatus.NOT_FOUND);
         return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
     }
